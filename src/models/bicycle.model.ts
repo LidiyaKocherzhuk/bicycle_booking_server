@@ -1,6 +1,7 @@
 import { model, Schema } from "mongoose";
 
 import { EStatus } from "../enums";
+import { IBicycle } from "../types";
 
 const bicycleSchema = new Schema(
   {
@@ -50,4 +51,4 @@ const bicycleSchema = new Schema(
   },
 );
 
-export const Bicycle = model(" bicycle", bicycleSchema);
+export const Bicycle = model<IBicycle>(" bicycle", bicycleSchema);
