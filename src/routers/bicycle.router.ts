@@ -11,7 +11,11 @@ bicycleRouter.post(
   bicycleMiddleware.isIDUnique,
   bicycleController.create,
 );
+
 bicycleRouter.get("", bicycleController.getAll);
+
+bicycleRouter.patch("/:id", bicycleController.update);
+
 bicycleRouter.delete(
   "/:id",
   bicycleMiddleware.isIdValid,
