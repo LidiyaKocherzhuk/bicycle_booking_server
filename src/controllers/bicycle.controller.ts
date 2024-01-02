@@ -30,6 +30,16 @@ class BicycleController {
     }
   }
 
+  public async update(req: Request, res: Response, next: NextFunction) {
+    try {
+      await bicycleRepository.update(req.params.id, req.body);
+      const bicycles = await bicycleRepository.getAll();
+      return res.status(200).json(bicycles);
+    } catch (e) {
+      next(e);
+    }
+  }
+
   public async delete(
     req: Request,
     res: Response,

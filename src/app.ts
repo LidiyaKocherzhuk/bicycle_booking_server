@@ -1,14 +1,16 @@
+import cors from "cors";
 import express, { NextFunction, Request, Response } from "express";
 import * as mongoose from "mongoose";
 
 import { configs } from "./configs";
 import { ApiError } from "./errors";
-import {bicycleRouter} from "./routers";
+import { bicycleRouter } from "./routers";
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors({ origin: configs.FRONTEND_HOST }));
 
 app.use("/bicycle", bicycleRouter);
 
