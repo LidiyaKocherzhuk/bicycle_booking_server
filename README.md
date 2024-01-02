@@ -6,7 +6,8 @@ In the project directory, you can run:
 
 ### `npm run start`
 
-## After run client part
+## After
+### run client part
 
 Clone this - [https://github.com/LidiyaKocherzhuk/bicycle_booking_client](https://github.com/LidiyaKocherzhuk/bicycle_booking_client)
 and folow README file.
